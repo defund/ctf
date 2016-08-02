@@ -1,0 +1,17 @@
+Delete the last 4 bytes, the Adler-32 checksum of a zlib stream, in order to get a truncated data stream
+
+use python decompressobj object from zlib module, which can decompress a truncated stream:
+
+from zlib import *
+f = open('corrupted','r')
+d = f.read()
+f.close()
+
+decompressor = decompressobj()
+o = decompressor.decompress(d[:-4])
+
+f = open('result.txt','w')
+f.write(o)
+f.close()
+
+weeb{no_different_than_tic_tac_toe}

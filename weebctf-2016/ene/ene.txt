@@ -1,0 +1,18 @@
+given (AB) and (A+B), where A is image data and B is key, xor files:
+
+(AB) x (A+B)
+(AB)~(A+B) + ~(AB)(A+B)
+AB~A~B + (~A + ~B)(A+B)
+~AA + ~BA + ~AB + ~BB
+~BA + ~AB
+AxB
+
+the result is the image data xored with the key
+
+using known header data for image, key can be determined:
+
+BA 8B A0 23 F1 77 65 48 EB B1 7A C9 45 C4 2F DE
+
+xor key with rest of image to get flag:
+
+weeb{jinzou_ENEmy}
