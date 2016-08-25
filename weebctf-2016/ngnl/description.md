@@ -1,1 +1,0 @@
-No Game No Life episode 1 - Sora and Shiro just beat Tet at chess and decided to save the game record. However, when the computer sucked them into Disboard, part of the data became corrupted. Find the flag.

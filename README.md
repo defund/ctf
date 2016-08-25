@@ -1,2 +1,4 @@
 # ctf
-write-ups for interesting problems I've made
+write-ups for problems I've made
+
+note: this doesn't have most of my problems, just interesting ones

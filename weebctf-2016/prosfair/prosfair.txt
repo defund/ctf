@@ -1,4 +1,4 @@
-the escript executable really just contains all the modules, or beam files, as a zip; delete the header and unzip the contents
+The escript executable really just contains all the modules as a zip; delete the header and unzip the contents
 
 the unique module is Elixir.Prosfair.beam
 

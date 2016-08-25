@@ -1,2 +1,2 @@
 # angstromctf 2016
-&mdash; fender blender - 70
+fender blender - 70

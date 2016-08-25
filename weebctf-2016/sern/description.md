@@ -1,1 +1,0 @@
-Steins;Gate episode 3 - Daru needs to hack into SERN’s network and has encountered some sort of encryption program. Determine an input he needs to get the result from here.
