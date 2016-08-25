@@ -1,1 +1,1 @@
-defund rendered 5 images from his [blender](https://angstromctf.com/static/problems/forensics/fender_blender/fender_blender.tar.gz). What are the frame numbers? There are 5000 frames in total. Submit the frame numbers in numerical order in the format flag{\<num1\>,\<num2\>,\<num3\>,\<num4\>,\<num5\>}.
+defund rendered 5 images from his blender. What are the frame numbers? There are 5000 frames in total. Submit the frame numbers in numerical order in the format flag{\<num1\>,\<num2\>,\<num3\>,\<num4\>,\<num5\>}.
