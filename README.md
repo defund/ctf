@@ -1,4 +1,4 @@
 # ctf
-write-ups for problems I've made
+Problem write-ups for various ctfs I've helped organize.
 
-note: this doesn't have most of my problems, just interesting ones
+Note: This doesn't have many of my problems, just interesting ones.
