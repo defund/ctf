@@ -1,0 +1,7 @@
+{
+    "flag": "actf{blend_in_with_the_debug}",
+    "hint": "Knowledge about blenders is important.",
+    "name": "blend",
+    "text": "defund has chosen to use his blender for malicious purposes. Authorities hunted him down, but not before he closed his blender. Recover the hidden message from a <a href='https://mega.nz/#!yZVgnA5a!O7cDJKDJ-NnQZbHQE4PqZSu0AtOhVwI0mLcc3W3gMug'>memory dump</a> of defund's blender.",
+    "value": 0
+}

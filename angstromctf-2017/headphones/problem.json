@@ -1,0 +1,10 @@
+{
+    "files": [
+        "headphones.pcap.zip"
+    ],
+    "flag": "actf{e392157ea599c605b6d483042ff8d9fe}",
+    "hint": "SADES A60",
+    "name": "headphones",
+    "text": "defund got gaming headphones. Get the flag from this {{headphones.pcap.zip,traffic}}.",
+    "value": 0
+}

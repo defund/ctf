@@ -1,0 +1,10 @@
+{
+    "files": [
+        "scanned.png"
+    ],
+    "flag": "actf{h!t_the_bullseye}",
+    "hint": "",
+    "name": "maxicode",
+    "text": "defund intercepted a mysterious parcel and was able to scan {{scanned.png,this}} from the packaging.",
+    "value": 0
+}
