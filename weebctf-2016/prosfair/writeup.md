@@ -4,6 +4,7 @@ the unique module is Elixir.Prosfair.beam
 
 run iex in the folder to access the modules:
 
+```
 WilliamsMacBook:~ wiwang$ cd Desktop/weebctf/prosfair/contents/
 WilliamsMacBook:contents wiwang$ iex
 Erlang/OTP 18 [erts-7.3] [source] [64-bit] [smp:4:4] [async-threads:10] [hipe] [kernel-poll:false] [dtrace]
@@ -15,5 +16,6 @@ iex(2)> Prosfair.printFlag
 weeb{venalcantos_420_in_ozzeau_averdidect}
 :ok
 iex(3)> 
+```
 
 weeb{venalcantos_420_in_ozzeau_averdidect}
