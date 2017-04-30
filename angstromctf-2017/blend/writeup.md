@@ -7,6 +7,7 @@ Listing the files shows that there is a file that we can extract:
 0xffff880028f00cd8                   1835316 /tmp/quit.blend
 
 /tmp/quit.blend is a recovery file that Blender stores whenever you exit without saving your model file. However, it seems like there isn't any useful information in it except for a message defund left behind:
+
 close, but no cigar :)
 
 Recovering bash history shows that defund called Blender from the command line, along with a debug flag. Running Blender in this debug mode means that many user actions, such as keyboard typing or mouse clicking, are logged and outputted in stdout. Plugins most likely exist to extract stdout, but you can also try to extract the keys typed directly from the memory dump. Source code is in source/.
