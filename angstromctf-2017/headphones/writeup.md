@@ -4,6 +4,6 @@ Wireshark labels which section of each packet is the USB URB header. Documentati
 
 https://msdn.microsoft.com/en-us/library/windows/hardware/ff537056(v=vs.85).aspx
 
-Extract all of the data after the header, which is raw PCM audio. Source code is available in source/.
+Extract all of the data after the header, which is raw PCM audio. Source code is available in this directory.
 
 Convert the raw audio into a format that audio players can understand using ffmpeg or Audacity. The parameters don't have to be perfect since you just need to be able to understand the flag.
