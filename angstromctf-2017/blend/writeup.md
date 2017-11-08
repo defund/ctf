@@ -10,7 +10,7 @@ Listing the files shows that there is a file that we can extract:
 
 close, but no cigar :)
 
-Recovering bash history shows that defund called Blender from the command line, along with a debug flag. Running Blender in this debug mode means that many user actions, such as keyboard typing or mouse clicking, are logged and outputted in stdout. Plugins most likely exist to extract stdout, but you can also try to extract the keys typed directly from the memory dump. Source code is in source/.
+Recovering bash history shows that defund called Blender from the command line, along with a debug flag. Running Blender in this debug mode means that many user actions, such as keyboard typing or mouse clicking, are logged and outputted in stdout. Plugins most likely exist to extract stdout, but you can also try to extract the keys typed directly from the memory dump. Source code is in this directory.
 
 Depending on what you used to detect logged output, you will get some type of output like this:
 
