@@ -1,0 +1,12 @@
+title: ofb
+author: defund
+value: 120
+text: |
+  defund made a simple OFB cipher, if you can even call it
+  that. Here's the [source]({{ encrypt.py }}) and the
+  [encrypted flag]({{ flag.png.enc }}).
+hint: Good luck!
+flag: actf{pad_rng}
+files:
+  - encrypt.py
+  - flag.png.enc

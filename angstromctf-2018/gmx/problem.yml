@@ -1,0 +1,22 @@
+title: gmx
+author: defund
+value: 160
+text: |
+  defund created a nonconformist hybrid cryptosystem. He even
+  made a service running at `web.angstromctf.com:3000`; here's
+  the [public key]({{ pk }}). All you have to do is decrypt
+  this [flag]({{ flag.enc }}), which was encrypted with this
+  [key]({{ key.enc }}). We've also provided the relevant
+  [source code]({{ gmx.zip }}).
+  Note: connect with netcat or an equivalent tool.
+hint: Good luck!
+flag: actf{a_bit_of_homomorphism}
+files:
+  - flag.enc
+  - gmx.zip
+  - key.enc
+  - pk
+deploy:
+  type: docker
+  ports:
+    3000: 3000

@@ -1,0 +1,17 @@
+title: paste palooza
+author: defund
+value: 150
+text: |
+  defund made his own pastebin in a fancy programming language!
+  As a true believer in open source projects, he also released
+  the [source]({{ pastepalooza.zip }}). The service is running at
+  `web.angstromctf.com:3001`.
+  Note: connect with netcat or an equivalent tool.
+hint: Good luck!
+flag: actf{elixir_encoding}
+files:
+  - pastepalooza.zip
+deploy:
+  type: docker
+  ports:
+    3001: 3001

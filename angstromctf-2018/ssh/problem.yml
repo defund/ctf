@@ -1,0 +1,18 @@
+title: ssh
+author: defund, kmh11
+value: 150
+text: |
+  In an effort to follow good security practices, defund set
+  up SSH keys for his server, which he connects to at
+  `ctf@web.angstromctf.com:3004`. kmh11 managed to get the
+  [public key]({{ id_rsa.pub }}) and part of the
+  [private key]({{ id_rsa }}). Help him ruin defund's life. 
+hint: Good luck!
+flag: actf{ssh_keys_not_broken_enough}
+files:
+  - id_rsa
+  - id_rsa.pub
+deploy:
+  type: docker
+  ports:
+    22: 3004
