@@ -1,0 +1,5 @@
+The object of this challenge is to decrypt `flag.png.enc`, which was encrypted with `encrypt.py`. The encryption appears to be a stream cipher. Unfortunately, the stream is not properly randomized; every 4 bytes is the output of a linear congruential generator (LCG).
+
+The LCG's parameters are largely unknown, with the exception of the modulus. However, it is possible to recover the others with three consecutive outputs of the LCG; see `source/decrypt.py` for details. We can obtain these three outputs from the known header data of a `PNG` file, which we xor with `flag.png.enc` to produce part of the keystream.
+
+Given that we know all of the LCG parameters, we can produce the rest of the keystream, xor it with `flag.png.enc`, and decrypt the file. A full solve script is in `source/decrypt.py`.
