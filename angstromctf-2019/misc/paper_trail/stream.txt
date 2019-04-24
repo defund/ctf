@@ -1,0 +1,25 @@
+PRIVMSG defund :I have to confide in someone, even if it's myself
+PRIVMSG defund :my publications are all randomly generated :(
+PRIVMSG defund :a
+PRIVMSG defund :c
+PRIVMSG defund :t
+PRIVMSG defund :f
+PRIVMSG defund :{
+PRIVMSG defund :f
+PRIVMSG defund :a
+PRIVMSG defund :k
+PRIVMSG defund :e
+PRIVMSG defund :_
+PING chat.freenode.net
+PRIVMSG defund :m
+PRIVMSG defund :a
+PRIVMSG defund :t
+PRIVMSG defund :h
+PRIVMSG defund :_
+PRIVMSG defund :p
+PRIVMSG defund :a
+PRIVMSG defund :p
+PRIVMSG defund :e
+PRIVMSG defund :r
+PRIVMSG defund :s
+PRIVMSG defund :}
