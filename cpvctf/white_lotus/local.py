@@ -1,0 +1,2 @@
+flag = 'flag{welcome_to_the_oracle_of_the_white_lotus}'
+key = b'\x08\xce\xd2\x98\x10\x12\x13\xddZ\xda\xce\xeeU\xe7A\xe9'
