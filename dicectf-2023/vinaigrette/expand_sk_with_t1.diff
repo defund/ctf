@@ -1,0 +1,34 @@
+diff --git a/src/ov_keypair.c b/src/ov_keypair.c
+index 7269725..b5aff7c 100644
+--- a/src/ov_keypair.c
++++ b/src/ov_keypair.c
+@@ -145,6 +145,29 @@ int expand_sk( sk_t* sk, const unsigned char *pk_seed , const unsigned char *sk_
+ }
+ 
+ 
++int expand_sk_with_t1( sk_t* sk, const unsigned char *pk_seed , const unsigned char *t1 )
++{
++    memcpy( sk->pk_seed , pk_seed , LEN_PKSEED );
++    memcpy( sk->t1 , t1 , sizeof(sk->t1) );
++
++    // prng for pk
++    prng_publicinputs_t prng1;
++    prng_set_publicinputs(&prng1 , pk_seed );
++    // P1
++    prng_gen_publicinputs(&prng1, sk->P1 , sizeof(sk->P1) );
++    // P2
++    prng_gen_publicinputs(&prng1, sk->L , sizeof(sk->L) );
++
++    // calcuate the parts of sk according to pk.
++#if defined(_BLAS_M4F_)
++    ov_pkc_calculate_F_from_Q( sk );
++#else
++    calculate_F2( sk->L , sk->P1 , sk->L , sk->t1 );
++#endif
++    return 0;
++}
++
++
+ 
+ ////////////////////////////////////////////////////////////////////////////////////
+ 
