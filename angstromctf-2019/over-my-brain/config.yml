@@ -1,0 +1,16 @@
+root: '/problems'
+competition: '2019'
+name: 'over_my_brain'
+files:
+  - src: 'over_my_brain'
+    dest: 'over_my_brain'
+    mode: 2555
+  - src: 'flag.txt'
+    dest: 'flag.txt'
+    mode: 440
+  - src: 'over_my_brain.c'
+    dest: 'over_my_brain.c'
+    mode: 444
+xinetd:
+  port: 19010
+  server: 'over_my_brain'

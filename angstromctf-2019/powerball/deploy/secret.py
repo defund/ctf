@@ -1,0 +1,1 @@
+flag = b'actf{no_more_free_oblivious_transfers}'

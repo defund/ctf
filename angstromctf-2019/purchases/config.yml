@@ -1,0 +1,16 @@
+root: '/problems'
+competition: '2019'
+name: 'purchases'
+files:
+  - src: 'purchases'
+    dest: 'purchases'
+    mode: 2555
+  - src: 'flag.txt'
+    dest: 'flag.txt'
+    mode: 440
+  - src: 'purchases.c'
+    dest: 'purchases.c'
+    mode: 444
+xinetd:
+  port: 19011
+  server: 'purchases'
