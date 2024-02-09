@@ -1,0 +1,19 @@
+[package]
+name = "solve"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dicenet = {path = "../challenge"}
+ocelot = {git = "https://github.com/GaloisInc/swanky.git", branch = "dev"}
+fancy-garbling = {git = "https://github.com/GaloisInc/swanky.git", branch = "dev"}
+scuttlebutt = {git = "https://github.com/GaloisInc/swanky.git", branch = "dev"}
+clap = { version = "4.4.18", features = ["derive"] }
+itertools = "0.8.0"
+num-integer = "0.1.45"
+pbr = "1.0.2"
+rand = "0.8.5"
+rand_core = "0.6.4"
+subtle = "2.5.0"
