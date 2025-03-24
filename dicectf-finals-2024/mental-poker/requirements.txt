@@ -1,0 +1,4 @@
+aiohttp
+fastecdsa
+pycryptodome
+requests

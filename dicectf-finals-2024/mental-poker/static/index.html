@@ -1,0 +1,101 @@
+<div class="container">
+    <div id="status"></div>
+    <input id="token" type="text">
+    <div id="matchups"></div>
+</div>
+
+<script>
+    const clientState = { position: null }
+
+    const gameState = async () => {
+        let data
+        try {
+            const response = await fetch('/public/round')
+            data = await response.json()
+        } catch (error) {
+            return undefined
+        }
+
+        return {
+            game: data['game_id'],
+            round: data['round_id'],
+            time: data['time_left'],
+        }
+    }
+
+    const showMatchups = async () => {
+        if (clientState.position === null) return
+
+        const token = document.getElementById('token').value
+        const { game, round } = clientState.position
+
+        let data
+        try {
+            const response = await fetch('/game/matchups', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ token }),
+            })
+
+            data = await response.json()
+        } catch (error) {
+            console.error(error)
+        }
+
+        document.getElementById('matchups').innerHTML = ''
+        for (const [id, turn] of data) {
+            const element = document.createElement('div')
+            const mine = turn === (round % 2 ? 'evens' : 'odds')
+            element.innerText = `game ${id}; ${mine ? 'your' : 'their'} turn`
+            document.getElementById('matchups').appendChild(element)
+        }
+    }
+    document.getElementById('token').addEventListener('change', showMatchups)
+
+    const update = async () => {
+        const state = await gameState()
+
+        if (state === undefined) {
+            clientState.position = null
+        } else {
+            const { game, round, time } = state
+            const sandbagged = Math.max(0, (+time) - 5)
+
+            const lastGame = clientState.position?.game
+            const lastRound = clientState.position?.round
+            clientState.position = { game, round, time: sandbagged }
+
+            if (game !== lastGame || round !== lastRound) {
+                onRoundChange()
+            }
+        }
+
+        onTimeChange()
+    }
+
+    const onTimeChange = async (event) => {
+        if (clientState.position === null) {
+            document.getElementById('status').innerText = 'Game has not begun'
+        } else {
+            const { game, round, time } = clientState.position
+            document.getElementById('status').innerText = (
+                `Game ${game}; ` +
+                `round ${round}; ` +
+                (
+                    time == 0
+                        ? 'time is up! starting next round...'
+                        : `${time} seconds left.`
+                )
+            )
+        }
+    }
+
+    const onRoundChange = async (event) => {
+        showMatchups()
+    }
+
+    setInterval(update, 1000)
+    update()
+</script>
