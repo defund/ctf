@@ -1,0 +1,32 @@
+name: pow-pow-pow
+author: defund
+description: |-
+  It's a free flag, all you have to do is wait! Verifiably.
+
+  `{{ nc }}`
+provide:
+  - file: ./server.py
+    as: pow_pow_pow.py
+flag:
+  file: ./flag.txt
+containers:
+  main:
+    replicas: 3
+    build: .
+    ports:
+      - 5000
+    securityContext:
+      privileged: true
+    resources:
+      requests:
+        cpu: 250m
+        memory: 200Mi
+      limits:
+        cpu: 2000m
+        memory: 500Mi
+expose:
+  main:
+    - target: 5000
+      tcp: 31001
+      healthContent: n =
+sortWeight: 70
