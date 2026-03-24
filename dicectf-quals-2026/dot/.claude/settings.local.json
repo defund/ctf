@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(./bin/python:*)",
+      "Bash(ls:*)",
+      "Bash(.venv/bin/python:*)",
+      "Bash(.venv/bin/python3:*)",
+      "Bash(/home/defund/miniforge3/bin/python:*)",
+      "Bash(/Users/defund/Downloads/dpp/.venv/bin/python3.14:*)",
+      "Bash(/Users/defund/Downloads/dpp/.venv/bin/python:*)"
+    ]
+  }
+}
