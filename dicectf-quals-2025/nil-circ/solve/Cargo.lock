@@ -283,7 +283,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0dc92fb57ca44df6db8059111ab3af99a63d5d0f8375d9972e319a379c6bab76"
 dependencies = [
  "generic-array 0.14.7",
- "rand_core",
+ "rand_core 0.6.4",
  "subtle",
 ]
 
@@ -307,7 +307,7 @@ dependencies = [
  "cpufeatures",
  "curve25519-dalek-derive",
  "fiat-crypto",
- "rand_core",
+ "rand_core 0.6.4",
  "rustc_version",
  "subtle",
  "zeroize",
@@ -369,7 +369,7 @@ dependencies = [
  "fancy-garbling-base-conversion",
  "itertools",
  "ocelot",
- "rand",
+ "rand 0.8.5",
  "regex",
  "scuttlebutt",
  "subtle",
@@ -398,7 +398,7 @@ dependencies = [
  "bitvec",
  "byteorder",
  "ff_derive",
- "rand_core",
+ "rand_core 0.6.4",
  "subtle",
 ]
 
@@ -671,7 +671,7 @@ dependencies = [
  "curve25519-dalek",
  "generic-array 1.2.0",
  "keyed_arena",
- "rand",
+ "rand 0.8.5",
  "scuttlebutt",
  "subtle",
  "vectoreyes",
@@ -749,8 +749,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "34af8d1a0e25924bc5b7c43c079c942339d8f0a8b57c39049bef581b46327404"
 dependencies = [
  "libc",
- "rand_chacha",
- "rand_core",
+ "rand_chacha 0.3.1",
+ "rand_core 0.6.4",
+]
+
+[[package]]
+name = "rand"
+version = "0.9.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7ec095654a25171c2124e9e3393a930bddbffdc939556c914957a4c3e0a87166"
+dependencies = [
+ "rand_chacha 0.9.0",
+ "rand_core 0.9.5",
 ]
 
 [[package]]
@@ -760,7 +770,17 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e6c10a63a0fa32252be49d21e7709d4d4baf8d231c2dbce1eaa8141b9b127d88"
 dependencies = [
  "ppv-lite86",
- "rand_core",
+ "rand_core 0.6.4",
+]
+
+[[package]]
+name = "rand_chacha"
+version = "0.9.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d3022b5f1df60f26e1ffddd6c66e8aa15de382ae63b3a0c1bfc0e4d3e3f325cb"
+dependencies = [
+ "ppv-lite86",
+ "rand_core 0.9.5",
 ]
 
 [[package]]
@@ -770,6 +790,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c"
 dependencies = [
  "getrandom 0.2.15",
+]
+
+[[package]]
+name = "rand_core"
+version = "0.9.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "76afc826de14238e6e8c374ddcc1fa19e374fd8dd986b0d2af0d02377261d83c"
+dependencies = [
+ "getrandom 0.3.1",
 ]
 
 [[package]]
@@ -844,9 +873,9 @@ dependencies = [
  "curve25519-dalek",
  "generic-array 1.2.0",
  "num-traits",
- "rand",
- "rand_chacha",
- "rand_core",
+ "rand 0.8.5",
+ "rand_chacha 0.3.1",
+ "rand_core 0.6.4",
  "serde",
  "sha2",
  "smallvec",
@@ -933,7 +962,7 @@ dependencies = [
  "fancy-garbling",
  "hex",
  "ocelot",
- "rand",
+ "rand 0.9.3",
  "regex",
  "scuttlebutt",
  "serde",
@@ -959,8 +988,8 @@ version = "0.6.0"
 source = "git+https://github.com/GaloisInc/swanky.git?branch=dev#cd3862acd39631cfc463f977028d792f9fb757d8"
 dependencies = [
  "bytemuck",
- "rand",
- "rand_core",
+ "rand 0.8.5",
+ "rand_core 0.6.4",
  "vectoreyes",
 ]
 
@@ -982,7 +1011,7 @@ dependencies = [
  "crypto-bigint",
  "generic-array 1.2.0",
  "num-traits",
- "rand",
+ "rand 0.8.5",
  "subtle",
  "swanky-serialization",
 ]
@@ -995,7 +1024,7 @@ dependencies = [
  "bytemuck",
  "crypto-bigint",
  "generic-array 1.2.0",
- "rand",
+ "rand 0.8.5",
  "subtle",
  "swanky-field",
  "swanky-serialization",
@@ -1010,7 +1039,7 @@ dependencies = [
  "bytemuck",
  "crypto-bigint",
  "generic-array 1.2.0",
- "rand",
+ "rand 0.8.5",
  "subtle",
  "swanky-field",
  "swanky-serialization",
@@ -1030,9 +1059,9 @@ dependencies = [
  "num-bigint 0.4.6",
  "num-traits",
  "num_cpus",
- "rand",
- "rand_chacha",
- "rand_core",
+ "rand 0.8.5",
+ "rand_chacha 0.3.1",
+ "rand_core 0.6.4",
  "sha2",
  "subtle",
  "swanky-field",
@@ -1132,7 +1161,7 @@ dependencies = [
  "proc-macro2",
  "quick-xml",
  "quote",
- "rand",
+ "rand 0.8.5",
  "serde",
  "serde_json",
  "subtle",
